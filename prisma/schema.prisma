@@ -17,4 +17,14 @@ model User {
   passwordHash String
   dateOfBirth  DateTime
   createdAt    DateTime @default(now())
+  videos       Video[]
+}
+
+model Video {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  filename  String
+  caption   String?
+  createdAt DateTime @default(now())
 }
