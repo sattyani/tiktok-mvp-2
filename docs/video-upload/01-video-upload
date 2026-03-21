@@ -1,0 +1,80 @@
+# Video Upload 2.1 — Upload video
+
+## Goal
+
+Allow a logged-in user to upload a video file with an optional caption.
+
+---
+
+## Start State
+
+- User authentication is implemented
+- Logged-in user exists in session
+- No upload functionality exists
+
+---
+
+## End State
+
+- User can upload a video file
+- Video is saved locally in `public/uploads/`
+- A database record is created for the video
+- User is redirected after successful upload
+
+---
+
+## Scope
+
+Included:
+
+- Create upload page `/upload`
+- Create upload form (file + caption)
+- Validate file type (MP4 only)
+- Validate file size (≤ 100MB)
+- Save file to `public/uploads/`
+- Create DB record in `Video` table
+
+---
+
+## Out of Scope
+
+- Video duration validation
+- Progress indicators
+- Video compression
+- Error retry logic
+- File storage outside local disk
+- UI polish
+
+---
+
+## Acceptance Criteria
+
+- Upload form is visible at `/upload`
+- User can select a video file
+- Only MP4 files are accepted
+- File is saved in `public/uploads/`
+- A video record is created in DB
+- User is redirected after upload
+
+---
+
+## Manual Test Steps
+
+1. Start the app
+2. Log in
+3. Navigate to `/upload`
+4. Select an MP4 file
+5. Add optional caption
+6. Submit form
+7. Confirm:
+   - File appears in `public/uploads/`
+   - DB record exists
+   - User is redirected
+
+---
+
+## Notes
+
+- Follow PRODUCT.md and CLAUDE.md strictly
+- Keep implementation minimal
+- Do not add extra features
