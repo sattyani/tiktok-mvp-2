@@ -109,11 +109,11 @@ Write the simplest code that satisfies the acceptance criteria. Prefer three lin
 Use only these technologies. Do not introduce new dependencies without explicit user approval.
 
 | Layer            | Technology      |
-| ---------------- | --------------- |
+| ---------------- | --------------- | --- |
 | Framework        | Next.js 16.2.0  |
 | Language         | TypeScript      |
 | Styling          | Tailwind CSS v4 |
-| Database ORM     | Prisma          |
+| Database ORM     | Prisma          | `   |
 | Auth / Session   | iron-session    |
 | Password hashing | bcryptjs        |
 | Runtime          | Node.js         |
